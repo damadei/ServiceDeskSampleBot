@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "resources": [
+    {
+      "type": "endpoint",
+      "id": "1",
+      "name": "development",
+      "url": "http://localhost:3978/api/messages"
+    },
+    {
+      "type": "abs",
+      "id": "3",
+      "name": "ServiceDeskSampleBot"
+    },
+    {
+      "type": "luis",
+      "id": "52",
+      "name": "support_ticket"
+    },
+    {
+      "type": "luis",
+      "id": "41",
+      "name": "account_password"
+    },
+    {
+      "type": "dispatch",
+      "id": "8",
+      "name": "dispatch",
+      "serviceIds": [
+        "52",
+        "41"
+      ]
+    },
+    {
+      "type": "qna",
+      "id": "49",
+      "name": "qna_service_desk_account_password"
+    },
+    {
+      "type": "qna",
+      "id": "88",
+      "name": "qna_kb_pc_and_laptop_issues"
+    },
+    {
+      "type": "qna",
+      "id": "89",
+      "name": "qna_kb_printer_issues"
+    },
+    {
+      "type": "dispatch",
+      "id": "80",
+      "name": "support_kbs_dispatch",
+      "serviceIds": [
+        "88",
+        "89"
+      ]
+    },
+    {
+      "type": "appInsights",
+      "name": "BotAppInsights",
+      "id": "BotAppInsights"
+    },
+    {
+      "type": "blob",
+      "id": "BotStorage"
+      "name": "BotStorage"
+    }
+  ]
+}

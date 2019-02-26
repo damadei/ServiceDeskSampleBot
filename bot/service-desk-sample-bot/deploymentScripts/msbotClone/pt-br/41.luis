@@ -1,0 +1,1652 @@
+{
+  "name": "service_desk_account_password",
+  "versionId": "1.0.0",
+  "desc": "",
+  "culture": "pt-br",
+  "intents": [
+    {
+      "name": "ACCOUNT_LOCKED"
+    },
+    {
+      "name": "CHANGE_PASSWORD"
+    },
+    {
+      "name": "INFO_ACCOUNT_LOCKED"
+    },
+    {
+      "name": "INFO_ACCOUNT_SUPPORT"
+    },
+    {
+      "name": "INFO_ACCOUNT_USAGE"
+    },
+    {
+      "name": "INFO_AND_RESET_PASSWORD"
+    },
+    {
+      "name": "INFO_CHANGE_PASSWORD"
+    },
+    {
+      "name": "INFO_PASSWORD_EXPIRATION"
+    },
+    {
+      "name": "INFO_PASSWORD_FORMAT"
+    },
+    {
+      "name": "INFO_PROBLEMS"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "PASSWORD_EXPIRATION"
+    }
+  ],
+  "entities": [
+    {
+      "name": "user_id",
+      "roles": []
+    }
+  ],
+  "closedLists": [],
+  "composites": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "regex_features": [],
+  "model_features": [],
+  "patterns": [
+    {
+      "pattern": "minha senha expirou e meu id de usuário é {user_id}",
+      "intent": "PASSWORD_EXPIRATION"
+    },
+    {
+      "pattern": "minha senha expirou e meu id de usuário é o {user_id}",
+      "intent": "PASSWORD_EXPIRATION"
+    },
+    {
+      "pattern": "expirou a senha do meu usuário {user_id}",
+      "intent": "PASSWORD_EXPIRATION"
+    },
+    {
+      "pattern": "minha password expirou e meu id de usuário é o {user_id}",
+      "intent": "PASSWORD_EXPIRATION"
+    },
+    {
+      "pattern": "meu id é {user_id} e minha senha expirou",
+      "intent": "PASSWORD_EXPIRATION"
+    }
+  ],
+  "utterances": [
+    {
+      "text": "a chave é reiniciada em algum momento?",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "a chave é resetada em algum momento?",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "a chave que você me deu, para que serve?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "a password é reiniciada em algum momento?",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "a password é resetada em algum momento?",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "a quem peço minhas credenciais?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "a senha da rede abre todos os aplicativos",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "a senha é reiniciada em algum momento?",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "a senha é resetada em algum momento?",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "acredita que meu usuário está bloqueado, você me ajuda?",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "acredite que meu usuário está bloqueada, você me ajuda? o id é abcd",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": [
+        {
+          "startPos": 63,
+          "endPos": 66,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "ajuda com minha conta bloqueada por favor.",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "ajuda com minha conta bloqueada por favor. o id do usuário é abcd",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": [
+        {
+          "startPos": 61,
+          "endPos": 64,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "ajuda com minha conta bloqueada por favor. o id é abcd",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": [
+        {
+          "startPos": 50,
+          "endPos": 53,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "ajuda para criar minha senha",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "ajuda! eu entendo que minha chave está bloqueada",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "alterar a senha para a conta abcd",
+      "intent": "CHANGE_PASSWORD",
+      "entities": [
+        {
+          "startPos": 29,
+          "endPos": 32,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "amigo, como minha chave de entrada deve ser robusta?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "ao mudar minha senha, você pode preencher meu nome?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "atualizo a senha e recebo uma mensagem de erro no celular, por quê?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "com a senha que você me deu, posso acessar meus aplicativos?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "com essa senha posso acessar a internet?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "com que frequência a chave muda?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "com que frequência devo alterar minha senha?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "com que freqüência devo alterar minha senha?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "como a senha da rede é alterada?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "como colocar uma nova senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como deve ser meu password?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "como deve ser minha chave?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "como deve ser minha password?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "como deve ser minha senha?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "como deve ser o formato da senha?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "como devo gerar meu password?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como devo mudar minha senha?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como é feita a troca de senha?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como é uma senha segura",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "como eu mudo minha senha?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como eu mudo minha senha? senha / senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como faço minha senha segura?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "como faço para alterar a senha se estou fora do escritório?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como faço para atualizar minha senha?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como faço para desbloquear meu usuário?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "como faço para gerar minha senha de rede?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "como faço para solicitar minha senha da minha conta?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "como foi a última vez que minha senha foi alterada?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como mudar minha chave de acesso",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como mudar minha senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como mudo o meu password?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como reativar minha senha",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "como redefinir minha senha?",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "como sei se já tenho uma senha?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "como sei se minha conta está bloqueada?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "como solicito minha senha pela primeira vez?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "como uma chave deve ser",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "conta bloqueada",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "criar minha chave de rede",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "de que meios posso solicitar ajuda da minha conta de rede?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "dentro de quando minha senha expira",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "desbloqueie apenas minha conta?",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "devo ter números minha senha?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "devo trocar a tomada, por quê?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "diga-me como eu mudo minhas credenciais?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "ele me pergunta toda vez para minhas credenciais.",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "eles mudaram minha senha agora, qual é a minha vez?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "em quais aplicativos minha senha funciona?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "em quais plataformas posso inserir minha senha?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "esqueci a chave, como recupero?",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "esqueci a senha eu não consigo entrar na minha máquina",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "esqueci minha senha",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "esqueci minha senha de rede",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "estou fora posso, mudar minha senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "eu acho que minha senha é muito simples",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "eu ainda não tenho acesso",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "eu coloquei minha senha foi rejeitada, o que eu faço?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "eu digitei minha senha errado e agora não consigo entrar",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "eu entrei com meu password mas não funciona, o que eu faço?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "eu entrei há uma semana e não tenho acesso",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "eu expirei minha senha e meu usuário é abcd",
+      "intent": "PASSWORD_EXPIRATION",
+      "entities": [
+        {
+          "startPos": 39,
+          "endPos": 42,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "eu expirei minha senha e minha conta é abcd",
+      "intent": "PASSWORD_EXPIRATION",
+      "entities": [
+        {
+          "startPos": 39,
+          "endPos": 42,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "eu fui para um lanche e agora minha conta não funciona.",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "eu gostaria de ajuda para mudar minha senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "eu gostaria de mudar meu password",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "eu gostaria de mudar minha senha",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "eu gostaria de usar minha chave em tudo, pode?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "eu não consigo entrar no meu laptop",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "eu não consigo entrar no meu pc",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "eu não consigo pensar em qual senha colocar",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "eu não gosto da minha senha, posso criar outra?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "eu não posso mudar minha senha, eu recebo erro",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "eu não recebo minha senha, o que pode estar acontecendo",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "eu não sei como mudar minha senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "eu não sei o que fazer com minha senha de rede",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "eu não tenho um usuário, o que eu faço?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "eu perdi minha senha",
+      "intent": "PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "eu posso desbloquear a conta do meu colega?",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "eu posso mudar minha senha",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "eu posso saber o processo para liberar minha senha",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "eu quero atualizar minha senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "eu quero desfazer minha senha",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "eu quero mudar o meu password e minha conta é abcd",
+      "intent": "CHANGE_PASSWORD",
+      "entities": [
+        {
+          "startPos": 46,
+          "endPos": 49,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "eu quero que minha senha seja simples?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "eu quero saber como melhorar minha senha",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "eu quero saber qual é a minha chave?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "eu recebo um erro depois de atualizar minha senha enquanto eu corrijo?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "eu sou novo, como faço minha primeira senha?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "eu tenho o quanto geral como mudar de passe",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "eu tenho problemas para desbloquear meu usuário",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "eu tenho que mudar a senha que você me deu?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "eu tenho que usar caracteres específicos (letras e números) ao modificar meu password?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "eu tenho um erro ao entrar no pc",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "eu tento recuperar minha senha, você me ajuda, por favor",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "eu trabalhei e recebi uma mensagem onde indica que minha senha foi bloqueada",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "existe um limite de tentativas de mudar a senha?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "existe um limite de tentativas de mudar o password?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "existe uma política que me diz como criar uma senha segura",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "expiração da chave",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "expiração da senha",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "expirar minha senha?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "fala, minha senha expira?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "fui almoçar e quando voltei não consegui logar",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "há suporte para mudança de chaves",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "há tempo para a chave expirar?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "hey minha chave expirou",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "mais uma vez minha conta foi bloqueada",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "me ajuda com a mudança da minha senha?",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "me ajudem a desbloquear minha senha?",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "meu chefe ainda não me dá meu usuário, quem eu peço?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "meu id é xxxxx e minha senha expirou",
+      "intent": "PASSWORD_EXPIRATION",
+      "entities": [
+        {
+          "startPos": 9,
+          "endPos": 13,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "meu nome de usuário está bloqueado, o que eu faço?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "meu password está bloqueado?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "meu password expirou e meu id de usuário é abcd",
+      "intent": "PASSWORD_EXPIRATION",
+      "entities": [
+        {
+          "startPos": 43,
+          "endPos": 46,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "meu password não funciona",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "meu registro parou de funcionar, o que eu faço?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "meu usuário está bloqueado",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "meu usuário está bloqueou",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "meu usuário não entra",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "meus e-mails não são atualizados, o que posso fazer, acabei de alterar minha senha",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "minha chave expira em algum momento?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "minha chave expirou",
+      "intent": "PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "minha conta está bloqueada",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "minha conta está bloqueada com muita frequência. o que eu faço?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "minha conta está bloqueada?",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "minha conta foi suspensa",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "minha conta foi travada",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "minha conta não funciona, não é reconhecida por nada",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "minha conta travou",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "minha password expirou e meu id de usuário é abcd",
+      "intent": "PASSWORD_EXPIRATION",
+      "entities": [
+        {
+          "startPos": 45,
+          "endPos": 48,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "minha senha de rede está dentro da chave que você me deu?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "minha senha de rede expira?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "minha senha deve ter um número?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "minha senha é bloqueada automaticamente",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "minha senha é genérica?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "minha senha é para uso pessoal ou pode ser compartilhada?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "minha senha expira?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "minha senha expirou e meu id de usuário é abcd",
+      "intent": "PASSWORD_EXPIRATION",
+      "entities": [
+        {
+          "startPos": 42,
+          "endPos": 45,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "minha senha expirou e meu id de usuário é o damadei",
+      "intent": "PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "minha senha expirou e minha conta é abcd",
+      "intent": "PASSWORD_EXPIRATION",
+      "entities": [
+        {
+          "startPos": 36,
+          "endPos": 39,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "minha senha expirou?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "minha senha funciona para tudo?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "minha senha funcionará?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "minha senha não funciona",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "minha senha não funciona mais",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "minha senha não funciona mais, o que aconteceu?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "minha senha parece muito simples, como faço isso?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "minha senha, o que é isso?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "mudança de chave",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "mudança de chave por favor",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "mudança de senha não funciona como posso mudar minha senha",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "mudar meu password",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "mudar minha senha",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "não aceitou minha senha, está bloqueada",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "não consigo entrar no meu email, celular, pc?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "não consigo mais entrar com minha senha, não funciona, você me ajuda?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "não me lembro da minha senha",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "não me permite acessar com minha senha, você pode me ajudar?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "não me permite logar, acho que está bloqueado. você me diz?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "não recebe os emails corporativos?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "no pc existem dois campos, usuário e senha. o que eles querem dizer e quem dá?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "o que devo seguir para alterar a senha?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "o que devo ter para solicitar o desbloqueio",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "o que é uma chave segura?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "o que eu preciso para alterar minha senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "o que minha senha deve conter?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "o que posso fazer para desbloquear minha conta?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "o que significa que minha senha está bloqueada?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "o sistema me diz para atualizar minha senha",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "onde a senha da rede é inserida?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "onde coloco meu nome de usuário e senha?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "onde está meu usuário?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "onde eu mudei minha senha pela primeira vez?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "onde minha senha de rede chegará?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "onde posso usar minha senha?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "onde tenho acesso com minha senha?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "os aplicativos estão pedindo senha, você pode verificar se meu password está bloqueado?",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "outro usuário pode me dar?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "para quem solicito minha senha de rede?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "por que a minha senha não é fácil de adivinhar",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "por que a senha tem q ser tão longa?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "por que devo alterar a senha?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "por que devo mudar minha senha?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "por que eu deveria mudar para cada desafio?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "por que meu usuário está bloqueado o tempo todo?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "por que minha conta está bloqueada?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "por que minha conta está constantemente bloqueada e a do meu colega não, se estamos na mesma área?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "por que minha conta está constantemente bloqueada?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "por que minha senha deve ser difícil?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "por que minha senha expira?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "por que minha senha expirou",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "por que minha senha expirou?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "por que não consigo digitar minha senha?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "por que não posso usar minha mesma senha?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "posso colocar a mesma chave?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "posso desabilitar o bloqueio da minha conta",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "posso guardar a chave genérica que me deram?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "posso perder minha senha?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "posso renomear minha senha?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "posso repetir minha senha?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "posso trabalhar com a mesma senha em todos os lugares?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "posso usar a mesma senha antiga?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "posso usar a mesma senha?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "posso usar minha senha em todos os aplicativos?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "posso usar minha senha em tudo?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "quais aplicativos minha senha atendeu?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "quais as características mínimas minha senha deve ter?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "quais características minha senha deve ter?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "quais programas são afetados pelo bloqueio da minha conta",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "quais requisitos de segurança de um password?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "quais requisitos de segurança de uma chave?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "quais requisitos minha senha / chave precisa ter?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "quais são os meios para mudar meu pwd?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "qual é a chave do meu cadastro?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "qual é a minha conta de email?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "qual é a minha senha?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "qual é o canal para mudar minha senha?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "qual é o fluxo para mudar minha senha?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "qual é o meu usuário?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "qual é o procedimento para mudar a chave",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "qual é o procedimento para solicitar acesso ao email?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "qual entrada de chave no meu email?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "qual processo eu sigo para colocar uma nova senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "qual senha eu uso para wifi?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "quando devo desbloquear minha conta?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "quando devo mudar meu passe?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando devo mudar minha senha?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando eu mudo minha senha?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando expira meu password?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando minha chave de rede não funcionará para mim?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando minha chave de rede para de funcionar?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando minha chave vai morrer?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando minha conta está desbloqueada, devo desbloquear ou alterar minha senha",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "quando minha password vai expirar?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando minha senha expira?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando minha senha expirará?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando minha senha vai expirar?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando mudo minha senha, posso mudar a anterior?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "quando não poderei usar minha senha de rede?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando tenho que mudar meu passe?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quando tenho que mudar meu password?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quantas tentativas tenho até que minha senha seja bloqueada?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "quanto tempo dura a minha senha?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "quantos caracteres devo ter minha senha?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "quantos dígitos minha senha deve ter?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "que chave você me dá para o meu pc?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "que uso eu dou para a conta de rede?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "que uso eu dou uma senha de rede?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "quem define as diretrizes para senhas?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "quem está bloqueando minha conta?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "quem eu pergunto ao meu primeiro usuário?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "quem me ajuda com a mudança de passe?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "quem me dá minha senha de rede?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "quero mudar minha chave",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "quero mudar o meu password",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "quero que você restabeleça minha senha. meu id de usuário é abcd",
+      "intent": "ACCOUNT_LOCKED",
+      "entities": [
+        {
+          "startPos": 60,
+          "endPos": 63,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "requisitos de senha",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "se a senha que eles me deram não funcionar, o que devo fazer?```markdown",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "se estou de férias outra pessoa pode solicitar a mudança do meu psw?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "se estou trabalhando em minha casa (vpn), a mudança de senha entra em vigor?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "se eu atualizar, tenho que atualizar todo o aplicativo?",
+      "intent": "INFO_ACCOUNT_USAGE",
+      "entities": []
+    },
+    {
+      "text": "se eu fosse praticante e agora sou contratado, ainda uso o mesmo registro?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "se eu quiser desbloquear minha senha, você pode me ajudar",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "se eu quiser minha senha, onde eu pergunto?",
+      "intent": "INFO_ACCOUNT_SUPPORT",
+      "entities": []
+    },
+    {
+      "text": "se eu quisesse atualizar minha senha, como eu faria isso?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "se eu usar meu registro em vários computadores, minha senha pode ser bloqueada?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "se eu usar outro pc, minha conta continuará bloqueada constantemente",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "se não me lembro da minha senha, o que posso fazer?",
+      "intent": "INFO_AND_RESET_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "só eu posso mudar minha senha?",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "toda vez que eu mudo meu password",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "trocar a senha",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "trocar de password",
+      "intent": "CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "você pode comprar algo com minha senha?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "você pode me ajudar a ver se minha senha expira a qualquer momento?",
+      "intent": "INFO_PASSWORD_EXPIRATION",
+      "entities": []
+    },
+    {
+      "text": "você pode me ajudar com minha senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "você pode me ajudar mudando minha senha ...",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "você sabe como desbloquear contas?",
+      "intent": "INFO_ACCOUNT_LOCKED",
+      "entities": []
+    },
+    {
+      "text": "você sabe quem pode mudar minha senha",
+      "intent": "INFO_CHANGE_PASSWORD",
+      "entities": []
+    },
+    {
+      "text": "você tem exemplos chave válidos?",
+      "intent": "INFO_PASSWORD_FORMAT",
+      "entities": []
+    },
+    {
+      "text": "voltei de férias e não me lembro da minha senha. o que eu faço?",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    },
+    {
+      "text": "voltei do almoço e agora não consigo entrar no meu pc",
+      "intent": "INFO_PROBLEMS",
+      "entities": []
+    }
+  ],
+  "luis_schema_version": "3.2.0",
+  "tokenizerVersion": "1.0.0",
+  "settings": []
+}

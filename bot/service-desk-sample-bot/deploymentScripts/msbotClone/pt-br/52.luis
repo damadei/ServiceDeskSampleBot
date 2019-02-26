@@ -1,0 +1,407 @@
+{
+  "name": "service_desk_support_ticket",
+  "versionId": "1.0.0",
+  "desc": "",
+  "culture": "pt-br",
+  "intents": [
+    {
+      "name": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "QUERY_SUPPORT_TICKETS"
+    },
+    {
+      "name": "SUPPORT_DELAY"
+    }
+  ],
+  "entities": [
+    {
+      "name": "problem",
+      "roles": []
+    },
+    {
+      "name": "ticket_id",
+      "roles": []
+    }
+  ],
+  "closedLists": [],
+  "composites": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "regex_features": [],
+  "model_features": [
+    {
+      "activated": true,
+      "name": "problem",
+      "words": "minha impressora não liga,impressora não liga,impressora não imprime,meu computador não liga,minha impressora está imprimindo borrado,imprime borrado,está borrando,deu zica no meu pc,deu zica no meu laptop,computador não liga,computador com pau,laptop não liga,laptop parou de funcionar,meu pc não liga,pc desligando,pc não liga,liga e desliga,desligamento do pc,computador reiniciando,computador desligando,pc desligando sozinho,pc reinicia sozinho,pc não liga!,pc nao liga,pc reiniciando sozinho,computador não liga ou não dá vídeo,pc não inicia,computador desliga sozinho,problemas no pc,pc desliga sozinho,tela azul da morte,telas azuis,computador travando ou congelando,computador desligando sozinho,pc travando,micro travando,micro não liga,travando,lento,computador travando,laptop travando,computador lento,computador está lento,windows está lento,pc lento,computador está com vírus,vírus,impressora não funciona,computador não funciona",
+      "mode": true
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "novo chamado para tratar {problem}",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "{problem}, favor abrir um chamado",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "o chamado {ticket_id} ainda não foi resolvido",
+      "intent": "SUPPORT_DELAY"
+    },
+    {
+      "pattern": "chamado {ticket_id} está atrasado",
+      "intent": "QUERY_SUPPORT_TICKETS"
+    },
+    {
+      "pattern": "{problem}, preciso abrir um chamado",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "como está meu chamado {ticket_id}",
+      "intent": "QUERY_SUPPORT_TICKETS"
+    },
+    {
+      "pattern": "abrir chamado pois {problem}",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "{problem} preciso abrir chamado",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "{problem}, abrir chamado",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "o chamado {ticket_id} está atrasado",
+      "intent": "SUPPORT_DELAY"
+    },
+    {
+      "pattern": "gostaria de abrir chamado pois {problem}",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "{problem}, abrir chamado por favor",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "meu chamado {ticket_id} está atrasado",
+      "intent": "SUPPORT_DELAY"
+    },
+    {
+      "pattern": "queria abrir um chamado pois {problem}",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "{problem}, por favor, abrir um chamado",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "como se encontra meu chamado {ticket_id}",
+      "intent": "QUERY_SUPPORT_TICKETS"
+    },
+    {
+      "pattern": "favor abrir um chamado pois {problem}",
+      "intent": "NEW_SUPPORT_TICKET"
+    },
+    {
+      "pattern": "como está o ticket {ticket_id}",
+      "intent": "QUERY_SUPPORT_TICKETS"
+    },
+    {
+      "pattern": "qual o status do meu chamado {ticket_id}",
+      "intent": "QUERY_SUPPORT_TICKETS"
+    },
+    {
+      "pattern": "abrir chamado por que {problem}",
+      "intent": "NEW_SUPPORT_TICKET"
+    }
+  ],
+  "utterances": [
+    {
+      "text": "abrir chamado",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": []
+    },
+    {
+      "text": "abrir chamado para problema na impressora",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": [
+        {
+          "startPos": 19,
+          "endPos": 40,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "abrir chamado pois minha impressora não liga",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": [
+        {
+          "startPos": 19,
+          "endPos": 43,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "abrir chamado pois xxxx",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": [
+        {
+          "startPos": 19,
+          "endPos": 22,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "ainda não resolveram o problema do meu chamado",
+      "intent": "SUPPORT_DELAY",
+      "entities": []
+    },
+    {
+      "text": "chamado atrasado",
+      "intent": "SUPPORT_DELAY",
+      "entities": []
+    },
+    {
+      "text": "como está meu chamado 12345",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": [
+        {
+          "startPos": 22,
+          "endPos": 26,
+          "entity": "ticket_id"
+        }
+      ]
+    },
+    {
+      "text": "como está meu chamado ab1234?",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": [
+        {
+          "startPos": 22,
+          "endPos": 27,
+          "entity": "ticket_id"
+        }
+      ]
+    },
+    {
+      "text": "como está meu chamado?",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "como está meu ticket ab12345?",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": [
+        {
+          "startPos": 21,
+          "endPos": 27,
+          "entity": "ticket_id"
+        }
+      ]
+    },
+    {
+      "text": "como está meu ticket?",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "como estão meus chamados",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "como estão meus tickets?",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "consultar chamado",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "consultar chamados no suporte",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "consultar meus chamados",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "deu pau no meu pc, quero abrir chamado",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 16,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "deu zica no meu laptop, chamado!",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 21,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "lista dos meus chamados no suporte",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "listar meus chamados",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "meu celular não conecta, favor abrir um chamado",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 22,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "meu chamado 123 está atrasado",
+      "intent": "SUPPORT_DELAY",
+      "entities": [
+        {
+          "startPos": 12,
+          "endPos": 14,
+          "entity": "ticket_id"
+        }
+      ]
+    },
+    {
+      "text": "meu computador não liga, abrir chamado",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 22,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "meu computador não liga, preciso abrir um chamado",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 22,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "meus chamados",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "minha impressora não liga, quero abrir um chamado",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 24,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "não funciona",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": []
+    },
+    {
+      "text": "não liga",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": []
+    },
+    {
+      "text": "novo chamado",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": []
+    },
+    {
+      "text": "novo chamado para resolver problema de acesso",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": [
+        {
+          "startPos": 27,
+          "endPos": 44,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "o chamado 123 ainda não foi resolvido",
+      "intent": "SUPPORT_DELAY",
+      "entities": [
+        {
+          "startPos": 10,
+          "endPos": 12,
+          "entity": "ticket_id"
+        }
+      ]
+    },
+    {
+      "text": "o chamado 123 está atrasado",
+      "intent": "SUPPORT_DELAY",
+      "entities": [
+        {
+          "startPos": 10,
+          "endPos": 12,
+          "entity": "ticket_id"
+        }
+      ]
+    },
+    {
+      "text": "quais são meus chamados?",
+      "intent": "QUERY_SUPPORT_TICKETS",
+      "entities": []
+    },
+    {
+      "text": "queria abrir um chamado",
+      "intent": "NEW_SUPPORT_TICKET",
+      "entities": []
+    },
+    {
+      "text": "ticket de suporte aberto mas não foi resolvido ainda",
+      "intent": "SUPPORT_DELAY",
+      "entities": []
+    },
+    {
+      "text": "x",
+      "intent": "None",
+      "entities": []
+    }
+  ],
+  "luis_schema_version": "3.2.0",
+  "tokenizerVersion": "1.0.0",
+  "settings": []
+}

@@ -1,0 +1,1985 @@
+{
+  "name": "service_desk_dispatch",
+  "versionId": "Dispatch",
+  "desc": "Dispatch model for service_desk_dispatch",
+  "culture": "pt-br",
+  "intents": [
+    {
+      "name": "l_service_desk_account_password"
+    },
+    {
+      "name": "l_service_desk_support_ticket"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "problem",
+      "roles": []
+    },
+    {
+      "name": "ticket_id",
+      "roles": []
+    },
+    {
+      "name": "user_id",
+      "roles": []
+    }
+  ],
+  "closedLists": [],
+  "composites": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "regex_features": [],
+  "model_features": [
+    {
+      "activated": true,
+      "name": "i_0",
+      "words": "minha impressora não liga,impressora não liga,impressora não imprime,meu computador não liga,minha impressora está imprimindo borrado,imprime borrado,está borrando,deu zica no meu pc,deu zica no meu laptop,computador não liga,computador com pau,laptop não liga,laptop parou de funcionar,meu pc não liga,pc desligando,pc não liga,liga e desliga,desligamento do pc,computador reiniciando,computador desligando,pc desligando sozinho,pc reinicia sozinho,pc não liga!,pc nao liga,pc reiniciando sozinho,computador não liga ou não dá vídeo,pc não inicia,computador desliga sozinho,problemas no pc,pc desliga sozinho,tela azul da morte,telas azuis,computador travando ou congelando,computador desligando sozinho,pc travando,micro travando,micro não liga,travando,lento,computador travando,laptop travando,computador lento,computador está lento,windows está lento,pc lento,computador está com vírus,vírus,impressora não funciona,computador não funciona",
+      "mode": true
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "minha password expirou e meu id de usuário é o {user_id}",
+      "intent": "l_service_desk_account_password"
+    },
+    {
+      "pattern": "minha senha expirou e meu id de usuário é o {user_id}",
+      "intent": "l_service_desk_account_password"
+    },
+    {
+      "pattern": "{problem} preciso abrir chamado",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "queria abrir um chamado pois {problem}",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "{problem}, abrir chamado",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "favor abrir um chamado pois {problem}",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "expirou a senha do meu usuário {user_id}",
+      "intent": "l_service_desk_account_password"
+    },
+    {
+      "pattern": "gostaria de abrir chamado pois {problem}",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "{problem}, favor abrir um chamado",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "o chamado {ticket_id} ainda não foi resolvido",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "novo chamado para tratar {problem}",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "como se encontra meu chamado {ticket_id}",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "meu chamado {ticket_id} está atrasado",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "como está o ticket {ticket_id}",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "como está meu chamado {ticket_id}",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "o chamado {ticket_id} está atrasado",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "chamado {ticket_id} está atrasado",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "{problem}, por favor, abrir um chamado",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "qual o status do meu chamado {ticket_id}",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "minha senha expirou e meu id de usuário é {user_id}",
+      "intent": "l_service_desk_account_password"
+    },
+    {
+      "pattern": "abrir chamado por que {problem}",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "{problem}, abrir chamado por favor",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "abrir chamado pois {problem}",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "{problem}, preciso abrir um chamado",
+      "intent": "l_service_desk_support_ticket"
+    },
+    {
+      "pattern": "meu id é {user_id} e minha senha expirou",
+      "intent": "l_service_desk_account_password"
+    }
+  ],
+  "utterances": [
+    {
+      "text": "a chave é reiniciada em algum momento",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "a chave é resetada em algum momento",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "a chave que você me deu, para que serve",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "a password é reiniciada em algum momento",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "a password é resetada em algum momento",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "a quem peço minhas credenciais",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "a senha da rede abre todos os aplicativos",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "a senha é reiniciada em algum momento",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "a senha é resetada em algum momento",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "abrir chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "abrir chamado para problema na impressora",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 19,
+          "endPos": 40,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "abrir chamado pois minha impressora não liga",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 19,
+          "endPos": 43,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "abrir chamado pois xxxx",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 19,
+          "endPos": 22,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "acredita que meu usuário está bloqueado, você me ajuda",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "acredite que meu usuário está bloqueada, você me ajuda? o id é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 63,
+          "endPos": 66,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "ainda não resolveram o problema do meu chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "ajuda com minha conta bloqueada por favor.",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "ajuda com minha conta bloqueada por favor. o id do usuário é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 61,
+          "endPos": 64,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "ajuda com minha conta bloqueada por favor. o id é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 50,
+          "endPos": 53,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "ajuda para criar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "ajuda! eu entendo que minha chave está bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "alterar a senha para a conta abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 29,
+          "endPos": 32,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "amigo, como minha chave de entrada deve ser robusta",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "ao mudar minha senha, você pode preencher meu nome",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "atualizo a senha e recebo uma mensagem de erro no celular, por quê",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "chamado atrasado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "com a senha que você me deu, posso acessar meus aplicativos",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "com essa senha posso acessar a internet",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "com que frequência a chave muda",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "com que frequência devo alterar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "com que freqüência devo alterar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como a senha da rede é alterada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como colocar uma nova senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como deve ser meu password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como deve ser minha chave",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como deve ser minha password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como deve ser minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como deve ser o formato da senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como devo gerar meu password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como devo mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como é feita a troca de senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como é uma senha segura",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como está meu chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "como está meu chamado 12345",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 22,
+          "endPos": 26,
+          "entity": "ticket_id"
+        }
+      ]
+    },
+    {
+      "text": "como está meu chamado ab1234",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "como está meu ticket",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "como está meu ticket ab12345",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "como estão meus chamados",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "como estão meus tickets",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "como eu mudo minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como eu mudo minha senha? senha / senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como faço minha senha segura",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como faço para alterar a senha se estou fora do escritório",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como faço para atualizar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como faço para desbloquear meu usuário",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como faço para gerar minha senha de rede",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como faço para solicitar minha senha da minha conta",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como foi a última vez que minha senha foi alterada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como mudar minha chave de acesso",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como mudo o meu password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como reativar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como redefinir minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como sei se já tenho uma senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como sei se minha conta está bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como solicito minha senha pela primeira vez",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "como uma chave deve ser",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "consultar chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "consultar chamados no suporte",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "consultar meus chamados",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "conta bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "criar minha chave de rede",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "de que meios posso solicitar ajuda da minha conta de rede",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "dentro de quando minha senha expira",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "desbloqueie apenas minha conta",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "deu pau no meu pc, quero abrir chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 16,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "deu zica no meu laptop, chamado!",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 21,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "devo ter números minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "devo trocar a tomada, por quê",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "diga-me como eu mudo minhas credenciais",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "ele me pergunta toda vez para minhas credenciais.",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eles mudaram minha senha agora, qual é a minha vez",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "em quais aplicativos minha senha funciona",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "em quais plataformas posso inserir minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "esqueci a chave, como recupero",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "esqueci a senha eu não consigo entrar na minha máquina",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "esqueci minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "esqueci minha senha de rede",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "estou fora posso, mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu acho que minha senha é muito simples",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu ainda não tenho acesso",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu coloquei minha senha foi rejeitada, o que eu faço",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu digitei minha senha errado e agora não consigo entrar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu entrei com meu password mas não funciona, o que eu faço",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu entrei há uma semana e não tenho acesso",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu expirei minha senha e meu usuário é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 39,
+          "endPos": 42,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "eu expirei minha senha e minha conta é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 39,
+          "endPos": 42,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "eu fui para um lanche e agora minha conta não funciona.",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu gostaria de ajuda para mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu gostaria de mudar meu password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu gostaria de mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu gostaria de usar minha chave em tudo, pode",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu não consigo entrar no meu laptop",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu não consigo entrar no meu pc",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu não consigo pensar em qual senha colocar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu não gosto da minha senha, posso criar outra",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu não posso mudar minha senha, eu recebo erro",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu não recebo minha senha, o que pode estar acontecendo",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu não sei como mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu não sei o que fazer com minha senha de rede",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu não tenho um usuário, o que eu faço",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu perdi minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu posso desbloquear a conta do meu colega",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu posso mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu posso saber o processo para liberar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu quero atualizar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu quero desfazer minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu quero mudar o meu password e minha conta é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 46,
+          "endPos": 49,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "eu quero que minha senha seja simples",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu quero saber como melhorar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu quero saber qual é a minha chave",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu recebo um erro depois de atualizar minha senha enquanto eu corrijo",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu sou novo, como faço minha primeira senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu tenho o quanto geral como mudar de passe",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu tenho problemas para desbloquear meu usuário",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu tenho que mudar a senha que você me deu",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu tenho que usar caracteres específicos (letras e números) ao modificar meu password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu tenho um erro ao entrar no pc",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu tento recuperar minha senha, você me ajuda, por favor",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "eu trabalhei e recebi uma mensagem onde indica que minha senha foi bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "existe um limite de tentativas de mudar a senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "existe um limite de tentativas de mudar o password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "existe uma política que me diz como criar uma senha segura",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "expiração da chave",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "expiração da senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "expirar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "fala, minha senha expira",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "fui almoçar e quando voltei não consegui logar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "há suporte para mudança de chaves",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "há tempo para a chave expirar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "hey minha chave expirou",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "impressora não liga",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 18,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "lista dos meus chamados no suporte",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "listar meus chamados",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "mais uma vez minha conta foi bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "me ajuda com a mudança da minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "me ajudem a desbloquear minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "meu celular não conecta, favor abrir um chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 22,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "meu chamado 123 está atrasado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 12,
+          "endPos": 14,
+          "entity": "ticket_id"
+        }
+      ]
+    },
+    {
+      "text": "meu chefe ainda não me dá meu usuário, quem eu peço",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "meu computador não liga, abrir chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 22,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "meu computador não liga, preciso abrir um chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 22,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "meu id é xxxxx e minha senha expirou",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 9,
+          "endPos": 13,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "meu nome de usuário está bloqueado, o que eu faço",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "meu password está bloqueado",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "meu password expirou e meu id de usuário é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 43,
+          "endPos": 46,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "meu password não funciona",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "meu registro parou de funcionar, o que eu faço",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "meu usuário está bloqueado",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "meu usuário está bloqueou",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "meu usuário não entra",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "meus chamados",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "meus e-mails não são atualizados, o que posso fazer, acabei de alterar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha chave expira em algum momento",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha chave expirou",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha conta está bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha conta está bloqueada com muita frequência. o que eu faço",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha conta foi suspensa",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha conta foi travada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha conta não funciona, não é reconhecida por nada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha conta travou",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha impressora não liga, quero abrir um chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 0,
+          "endPos": 24,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "minha password expirou e meu id de usuário é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 45,
+          "endPos": 48,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "minha senha de rede está dentro da chave que você me deu",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha de rede expira",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha deve ter um número",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha é bloqueada automaticamente",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha é genérica",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha é para uso pessoal ou pode ser compartilhada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha expira",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha expirou",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha expirou e meu id de usuário é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 42,
+          "endPos": 45,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "minha senha expirou e meu id de usuário é o damadei",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha expirou e minha conta é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 36,
+          "endPos": 39,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "minha senha funciona para tudo",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha funcionará",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha não funciona",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha não funciona mais",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha não funciona mais, o que aconteceu",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha parece muito simples, como faço isso",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "minha senha, o que é isso",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "mudança de chave",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "mudança de chave por favor",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "mudança de senha não funciona como posso mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "mudar meu password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "não aceitou minha senha, está bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "não consigo entrar no meu email, celular, pc",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "não consigo mais entrar com minha senha, não funciona, você me ajuda",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "não funciona",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "não liga",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "não me lembro da minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "não me permite acessar com minha senha, você pode me ajudar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "não me permite logar, acho que está bloqueado. você me diz",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "não recebe os emails corporativos",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "no pc existem dois campos, usuário e senha. o que eles querem dizer e quem dá",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "novo chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "novo chamado para resolver problema de acesso",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 27,
+          "endPos": 44,
+          "entity": "problem"
+        }
+      ]
+    },
+    {
+      "text": "o chamado 123 ainda não foi resolvido",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 10,
+          "endPos": 12,
+          "entity": "ticket_id"
+        }
+      ]
+    },
+    {
+      "text": "o chamado 123 está atrasado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": [
+        {
+          "startPos": 10,
+          "endPos": 12,
+          "entity": "ticket_id"
+        }
+      ]
+    },
+    {
+      "text": "o que devo seguir para alterar a senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "o que devo ter para solicitar o desbloqueio",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "o que é uma chave segura",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "o que eu preciso para alterar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "o que minha senha deve conter",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "o que posso fazer para desbloquear minha conta",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "o que significa que minha senha está bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "o sistema me diz para atualizar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "onde a senha da rede é inserida",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "onde coloco meu nome de usuário e senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "onde está meu usuário",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "onde eu mudei minha senha pela primeira vez",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "onde minha senha de rede chegará",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "onde posso usar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "onde tenho acesso com minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "os aplicativos estão pedindo senha, você pode verificar se meu password está bloqueado",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "outro usuário pode me dar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "para quem solicito minha senha de rede",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que a minha senha não é fácil de adivinhar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que a senha tem q ser tão longa",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que devo alterar a senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que devo mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que eu deveria mudar para cada desafio",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que meu usuário está bloqueado o tempo todo",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que minha conta está bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que minha conta está constantemente bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que minha conta está constantemente bloqueada e a do meu colega não, se estamos na mesma área",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que minha senha deve ser difícil",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que minha senha expira",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que minha senha expirou",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que não consigo digitar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "por que não posso usar minha mesma senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso colocar a mesma chave",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso desabilitar o bloqueio da minha conta",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso guardar a chave genérica que me deram",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso perder minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso renomear minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso repetir minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso trabalhar com a mesma senha em todos os lugares",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso usar a mesma senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso usar a mesma senha antiga",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso usar minha senha em todos os aplicativos",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "posso usar minha senha em tudo",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quais aplicativos minha senha atendeu",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quais as características mínimas minha senha deve ter",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quais características minha senha deve ter",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quais programas são afetados pelo bloqueio da minha conta",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quais requisitos de segurança de um password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quais requisitos de segurança de uma chave",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quais requisitos minha senha / chave precisa ter",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quais são meus chamados",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "quais são os meios para mudar meu pwd",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual é a chave do meu cadastro",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual é a minha conta de email",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual é a minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual é o canal para mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual é o fluxo para mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual é o meu usuário",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual é o procedimento para mudar a chave",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual é o procedimento para solicitar acesso ao email",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual entrada de chave no meu email",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual processo eu sigo para colocar uma nova senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "qual senha eu uso para wifi",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando devo desbloquear minha conta",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando devo mudar meu passe",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando devo mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando eu mudo minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando expira meu password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando minha chave de rede não funcionará para mim",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando minha chave de rede para de funcionar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando minha chave vai morrer",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando minha conta está desbloqueada, devo desbloquear ou alterar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando minha password vai expirar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando minha senha expira",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando minha senha expirará",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando minha senha vai expirar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando mudo minha senha, posso mudar a anterior",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando não poderei usar minha senha de rede",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando tenho que mudar meu passe",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quando tenho que mudar meu password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quantas tentativas tenho até que minha senha seja bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quanto tempo dura a minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quantos caracteres devo ter minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quantos dígitos minha senha deve ter",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "que chave você me dá para o meu pc",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "que uso eu dou para a conta de rede",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "que uso eu dou uma senha de rede",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quem define as diretrizes para senhas",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quem está bloqueando minha conta",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quem eu pergunto ao meu primeiro usuário",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quem me ajuda com a mudança de passe",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quem me dá minha senha de rede",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "queria abrir um chamado",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "quero mudar minha chave",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quero mudar o meu password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "quero que você restabeleça minha senha. meu id de usuário é abcd",
+      "intent": "l_service_desk_account_password",
+      "entities": [
+        {
+          "startPos": 60,
+          "endPos": 63,
+          "entity": "user_id"
+        }
+      ]
+    },
+    {
+      "text": "requisitos de senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se a senha que eles me deram não funcionar, o que devo fazer?```markdown",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se estou de férias outra pessoa pode solicitar a mudança do meu psw",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se estou trabalhando em minha casa (vpn), a mudança de senha entra em vigor",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se eu atualizar, tenho que atualizar todo o aplicativo",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se eu fosse praticante e agora sou contratado, ainda uso o mesmo registro",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se eu quiser desbloquear minha senha, você pode me ajudar",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se eu quiser minha senha, onde eu pergunto",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se eu quisesse atualizar minha senha, como eu faria isso",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se eu usar meu registro em vários computadores, minha senha pode ser bloqueada",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se eu usar outro pc, minha conta continuará bloqueada constantemente",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "se não me lembro da minha senha, o que posso fazer",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "só eu posso mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "ticket de suporte aberto mas não foi resolvido ainda",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    },
+    {
+      "text": "toda vez que eu mudo meu password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "trocar a senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "trocar de password",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "você pode comprar algo com minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "você pode me ajudar a ver se minha senha expira a qualquer momento",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "você pode me ajudar com minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "você pode me ajudar mudando minha senha ...",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "você sabe como desbloquear contas",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "você sabe quem pode mudar minha senha",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "você tem exemplos chave válidos",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "voltei de férias e não me lembro da minha senha. o que eu faço",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "voltei do almoço e agora não consigo entrar no meu pc",
+      "intent": "l_service_desk_account_password",
+      "entities": []
+    },
+    {
+      "text": "x",
+      "intent": "l_service_desk_support_ticket",
+      "entities": []
+    }
+  ],
+  "luis_schema_version": "3.2.0",
+  "tokenizerVersion": "1.0.0",
+  "settings": []
+}

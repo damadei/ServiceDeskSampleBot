@@ -1,0 +1,116 @@
+{
+  "name": "support_kbs_dispatch",
+  "versionId": "Dispatch",
+  "desc": "dispatch",
+  "culture": "pt-br",
+  "intents": [
+    {
+      "name": "None"
+    },
+    {
+      "name": "q_kb_pc_and_laptop_issues"
+    },
+    {
+      "name": "q_kb_printer_issues"
+    }
+  ],
+  "entities": [],
+  "closedLists": [],
+  "composites": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "regex_features": [],
+  "model_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "a impressão está borrada",
+      "intent": "q_kb_printer_issues",
+      "entities": []
+    },
+    {
+      "text": "computador não acende",
+      "intent": "q_kb_pc_and_laptop_issues",
+      "entities": []
+    },
+    {
+      "text": "computador não liga",
+      "intent": "q_kb_pc_and_laptop_issues",
+      "entities": []
+    },
+    {
+      "text": "impressão borrada",
+      "intent": "q_kb_printer_issues",
+      "entities": []
+    },
+    {
+      "text": "impressão com falhas",
+      "intent": "q_kb_printer_issues",
+      "entities": []
+    },
+    {
+      "text": "impressora desligada",
+      "intent": "q_kb_printer_issues",
+      "entities": []
+    },
+    {
+      "text": "impressora não imprime",
+      "intent": "q_kb_printer_issues",
+      "entities": []
+    },
+    {
+      "text": "impressora não liga",
+      "intent": "q_kb_printer_issues",
+      "entities": []
+    },
+    {
+      "text": "impressora não quer ligar",
+      "intent": "q_kb_printer_issues",
+      "entities": []
+    },
+    {
+      "text": "infectado",
+      "intent": "q_kb_pc_and_laptop_issues",
+      "entities": []
+    },
+    {
+      "text": "laptop não liga",
+      "intent": "q_kb_pc_and_laptop_issues",
+      "entities": []
+    },
+    {
+      "text": "meu computador está com vírus",
+      "intent": "q_kb_pc_and_laptop_issues",
+      "entities": []
+    },
+    {
+      "text": "minha impressora não liga",
+      "intent": "q_kb_printer_issues",
+      "entities": []
+    },
+    {
+      "text": "monitor desligado",
+      "intent": "q_kb_pc_and_laptop_issues",
+      "entities": []
+    },
+    {
+      "text": "não imprime",
+      "intent": "q_kb_printer_issues",
+      "entities": []
+    },
+    {
+      "text": "pc não liga",
+      "intent": "q_kb_pc_and_laptop_issues",
+      "entities": []
+    },
+    {
+      "text": "vírus",
+      "intent": "q_kb_pc_and_laptop_issues",
+      "entities": []
+    }
+  ],
+  "luis_schema_version": "3.2.0",
+  "tokenizerVersion": "1.0.0",
+  "settings": []
+}

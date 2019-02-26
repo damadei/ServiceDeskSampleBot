@@ -1,0 +1,30 @@
+{
+  "qnaDocuments": [
+    {
+      "id": 1,
+      "answer": "Verifique se o computador ou component está ligado na tomada. Verifique também se o cabo de força está plugado.\n  \n\n",
+      "source": "Editorial",
+      "questions": [
+        "pc não liga\n\n",
+        "laptop não liga",
+        "computador não liga",
+        "computador não acende\n\n",
+        "monitor desligado\n\n"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": []
+    },
+    {
+      "id": 2,
+      "answer": "Verifique se o software de antivírus está instalado e atualizado. Execute um escaneamento completo do computador.\n  \n\n",
+      "source": "Editorial",
+      "questions": [
+        "vírus",
+        "meu computador está com vírus\n\n",
+        "infectado\n\n"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": []
+    }
+  ]
+}

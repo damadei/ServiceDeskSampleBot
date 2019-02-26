@@ -1,0 +1,35 @@
+﻿{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "horizontalAlignment": "center",
+          "size": "large",
+          "weight": "bolder",
+          "text": "OCP Latam Partner Readiness Bot"
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "Image",
+          "horizontalAlignment": "Center",
+          "url": "https://ocppartnerreadiness.blob.core.windows.net/images/ocp-logo.png"
+        },
+        {
+          "type": "TextBlock",
+          "horizontalAlignment": "Left",
+          "text": "Welcome to the OCP LATAM Partner Sample Bot. This Bot sample Service Desk bot to be used as a starting project for partners developing similar Bots.",
+          "wrap": true
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}

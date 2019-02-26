@@ -1,0 +1,40 @@
+{
+  "qnaDocuments": [
+    {
+      "id": 1,
+      "answer": "Verifique se a impressora está conectada ao cabo de alimentação e se o cabo de alimentação está conectado à tomada.",
+      "source": "Editorial",
+      "questions": [
+        "impressora não liga\n\n",
+        "minha impressora não liga\n\n",
+        "impressora desligada\n\n",
+        "impressora não quer ligar\n\n"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": []
+    },
+    {
+      "id": 2,
+      "answer": "Verifique se o toner da impressora ainda possui carga.",
+      "source": "Editorial",
+      "questions": [
+        "impressora não imprime\n\n",
+        "não imprime\n\n\n",
+        "impressão com falhas\n\n"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": []
+    },
+    {
+      "id": 3,
+      "answer": "Efetue a limpeza do toner ou solicite a troca do mesmo.  ",
+      "source": "Editorial",
+      "questions": [
+        "impressão borrada",
+        "a impressão está borrada"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": []
+    }
+  ]
+}

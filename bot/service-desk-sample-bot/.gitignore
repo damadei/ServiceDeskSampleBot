@@ -1,0 +1,11 @@
+node_modules
+lib
+.env
+.luisrc
+.qnamakerrc
+cognitiveModels
+data
+*.dispatch
+*.bot
+publish
+publish.cmd
