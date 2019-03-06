@@ -3,6 +3,8 @@ Sample Service Desk Bot
 
 This bot has been created using Bot Framework, it shows how to create a bot capable of performing Service Desk tasks.
 
+[Here](./PREREQUISITES.md) you will find the list of pre-requisites for deploying the Bot to Azure.
+
 Follow the steps [here](./mock_services/ticket-dummy-service) to deploy the supporting services.
 
 Follow the steps [here](./bot/service-desk-sample-bot) to deploy the Bot.
